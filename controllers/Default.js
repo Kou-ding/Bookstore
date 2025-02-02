@@ -3,7 +3,7 @@
 var utils = require('../utils/writer.js');
 var Default = require('../service/DefaultService');
 
-module.exports.authorsAuthorIdDELETE = function authorsAuthorIdDELETE (res, authorId) {
+module.exports.authorsAuthorIdDELETE = function authorsAuthorIdDELETE (req, res, next, authorId) {
   Default.authorsAuthorIdDELETE(authorId)
     .then(function (response) {
       utils.writeJson(res, response);
@@ -13,7 +13,7 @@ module.exports.authorsAuthorIdDELETE = function authorsAuthorIdDELETE (res, auth
     });
 };
 
-module.exports.authorsAuthorIdGET = function authorsAuthorIdGET (res, authorId) {
+module.exports.authorsAuthorIdGET = function authorsAuthorIdGET (req, res, next, authorId) {
   Default.authorsAuthorIdGET(authorId)
     .then(function (response) {
       utils.writeJson(res, response);
@@ -23,7 +23,7 @@ module.exports.authorsAuthorIdGET = function authorsAuthorIdGET (res, authorId) 
     });
 };
 
-module.exports.authorsAuthorIdPUT = function authorsAuthorIdPUT (res, body, authorId) {
+module.exports.authorsAuthorIdPUT = function authorsAuthorIdPUT (req, res, next, body, authorId) {
   Default.authorsAuthorIdPUT(body, authorId)
     .then(function (response) {
       utils.writeJson(res, response);
@@ -33,7 +33,7 @@ module.exports.authorsAuthorIdPUT = function authorsAuthorIdPUT (res, body, auth
     });
 };
 
-module.exports.authorsGET = function authorsGET (res) {
+module.exports.authorsGET = function authorsGET (req, res, next) {
   Default.authorsGET()
     .then(function (response) {
       utils.writeJson(res, response);
@@ -43,7 +43,7 @@ module.exports.authorsGET = function authorsGET (res) {
     });
 };
 
-module.exports.authorsPOST = function authorsPOST (res, body) {
+module.exports.authorsPOST = function authorsPOST (req, res, next, body) {
   Default.authorsPOST(body)
     .then(function (response) {
       utils.writeJson(res, response);
@@ -53,7 +53,7 @@ module.exports.authorsPOST = function authorsPOST (res, body) {
     });
 };
 
-module.exports.booksBookIdDELETE = function booksBookIdDELETE (res, bookId) {
+module.exports.booksBookIdDELETE = function booksBookIdDELETE (req, res, next, bookId) {
   Default.booksBookIdDELETE(bookId)
     .then(function (response) {
       utils.writeJson(res, response);
@@ -63,7 +63,7 @@ module.exports.booksBookIdDELETE = function booksBookIdDELETE (res, bookId) {
     });
 };
 
-module.exports.booksBookIdGET = function booksBookIdGET (res,  bookId) {
+module.exports.booksBookIdGET = function booksBookIdGET (req, res, next, bookId) {
   Default.booksBookIdGET(bookId)
     .then(function (response) {
       utils.writeJson(res, response);
@@ -73,7 +73,7 @@ module.exports.booksBookIdGET = function booksBookIdGET (res,  bookId) {
     });
 };
 
-module.exports.booksBookIdPUT = function booksBookIdPUT (res, body, bookId) {
+module.exports.booksBookIdPUT = function booksBookIdPUT (req, res, next, body, bookId) {
   Default.booksBookIdPUT(body, bookId)
     .then(function (response) {
       utils.writeJson(res, response);
@@ -83,7 +83,7 @@ module.exports.booksBookIdPUT = function booksBookIdPUT (res, body, bookId) {
     });
 };
 
-module.exports.booksGET = function booksGET (res) {
+module.exports.booksGET = function booksGET (req, res, next) {
   Default.booksGET()
     .then(function (response) {
       utils.writeJson(res, response);
@@ -93,7 +93,7 @@ module.exports.booksGET = function booksGET (res) {
     });
 };
 
-module.exports.booksPOST = function booksPOST (res, body) {
+module.exports.booksPOST = function booksPOST (req, res, next, body) {
   Default.booksPOST(body)
     .then(function (response) {
       utils.writeJson(res, response);
@@ -103,7 +103,7 @@ module.exports.booksPOST = function booksPOST (res, body) {
     });
 };
 
-module.exports.categoriesCategoryIdDELETE = function categoriesCategoryIdDELETE (res, categoryId) {
+module.exports.categoriesCategoryIdDELETE = function categoriesCategoryIdDELETE (req, res, next, categoryId) {
   Default.categoriesCategoryIdDELETE(categoryId)
     .then(function (response) {
       utils.writeJson(res, response);
@@ -113,7 +113,7 @@ module.exports.categoriesCategoryIdDELETE = function categoriesCategoryIdDELETE 
     });
 };
 
-module.exports.categoriesCategoryIdGET = function categoriesCategoryIdGET (res, categoryId) {
+module.exports.categoriesCategoryIdGET = function categoriesCategoryIdGET (req, res, next, categoryId) {
   Default.categoriesCategoryIdGET(categoryId)
     .then(function (response) {
       utils.writeJson(res, response);
@@ -123,7 +123,7 @@ module.exports.categoriesCategoryIdGET = function categoriesCategoryIdGET (res, 
     });
 };
 
-module.exports.categoriesCategoryIdPUT = function categoriesCategoryIdPUT (res, body, categoryId) {
+module.exports.categoriesCategoryIdPUT = function categoriesCategoryIdPUT (req, res, next, body, categoryId) {
   Default.categoriesCategoryIdPUT(body, categoryId)
     .then(function (response) {
       utils.writeJson(res, response);
@@ -133,7 +133,7 @@ module.exports.categoriesCategoryIdPUT = function categoriesCategoryIdPUT (res, 
     });
 };
 
-module.exports.categoriesGET = function categoriesGET (res) {
+module.exports.categoriesGET = function categoriesGET (req, res, next) {
   Default.categoriesGET()
     .then(function (response) {
       utils.writeJson(res, response);
@@ -143,7 +143,7 @@ module.exports.categoriesGET = function categoriesGET (res) {
     });
 };
 
-module.exports.categoriesPOST = function categoriesPOST (res, body) {
+module.exports.categoriesPOST = function categoriesPOST (req, res, next, body) {
   Default.categoriesPOST(body)
     .then(function (response) {
       utils.writeJson(res, response);

@@ -8,7 +8,7 @@
  * no response value expected for this operation
  **/
 exports.authorsAuthorIdDELETE = function() {
-  return new Promise(function(resolve, reject) {
+  return new Promise(function(resolve) {
     resolve();
   });
 }
@@ -21,7 +21,7 @@ exports.authorsAuthorIdDELETE = function() {
  * returns Author
  **/
 exports.authorsAuthorIdGET = function() {
-  return new Promise(function(resolve, reject) {
+  return new Promise(function(resolve) {
     var examples = {};
     examples['application/json'] = {
   "name" : "name",
@@ -44,7 +44,7 @@ exports.authorsAuthorIdGET = function() {
  * returns Author
  **/
 exports.authorsAuthorIdPUT = function() {
-  return new Promise(function(resolve, reject) {
+  return new Promise(function(resolve) {
     var examples = {};
     examples['application/json'] = {
   "name" : "name",
@@ -151,7 +151,7 @@ exports.booksBookIdGET = function() {
  * returns Book
  **/
 exports.booksBookIdPUT = function() {
-  return new Promise(function(resolve, reject) {
+  return new Promise(function(resolve) {
     var examples = {};
     examples['application/json'] = {
   "category_id" : 1,
@@ -244,7 +244,7 @@ exports.categoriesCategoryIdDELETE = function() {
  * returns Category
  **/
 exports.categoriesCategoryIdGET = function() {
-  return new Promise(function(resolve, reject) {
+  return new Promise(function(resolve) {
     var examples = {};
     examples['application/json'] = {
   "name" : "name",
@@ -267,7 +267,7 @@ exports.categoriesCategoryIdGET = function() {
  * returns Category
  **/
 exports.categoriesCategoryIdPUT = function() {
-  return new Promise(function(resolve, reject) {
+  return new Promise(function(resolve) {
     var examples = {};
     examples['application/json'] = {
   "name" : "name",
@@ -312,7 +312,7 @@ exports.categoriesGET = function() {
  * body CategoryInput 
  * returns Category
  **/
-exports.categoriesPOST = function(body) {
+exports.categoriesPOST = function() {
   return new Promise(function(resolve) {
     var examples = {};
     examples['application/json'] = {

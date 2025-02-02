@@ -7,7 +7,7 @@
  * authorId Long 
  * no response value expected for this operation
  **/
-exports.authorsAuthorIdDELETE = function(authorId) {
+exports.authorsAuthorIdDELETE = function() {
   return new Promise(function(resolve, reject) {
     resolve();
   });
@@ -20,7 +20,7 @@ exports.authorsAuthorIdDELETE = function(authorId) {
  * authorId Long 
  * returns Author
  **/
-exports.authorsAuthorIdGET = function(authorId) {
+exports.authorsAuthorIdGET = function() {
   return new Promise(function(resolve, reject) {
     var examples = {};
     examples['application/json'] = {
@@ -43,7 +43,7 @@ exports.authorsAuthorIdGET = function(authorId) {
  * authorId Long 
  * returns Author
  **/
-exports.authorsAuthorIdPUT = function(body,authorId) {
+exports.authorsAuthorIdPUT = function() {
   return new Promise(function(resolve, reject) {
     var examples = {};
     examples['application/json'] = {
@@ -65,7 +65,7 @@ exports.authorsAuthorIdPUT = function(body,authorId) {
  * returns List
  **/
 exports.authorsGET = function() {
-  return new Promise(function(resolve, reject) {
+  return new Promise(function(resolve) {
     var examples = {};
     examples['application/json'] = [ {
   "name" : "name",
@@ -90,7 +90,7 @@ exports.authorsGET = function() {
  * returns Author
  **/
 exports.authorsPOST = function(body) {
-  return new Promise(function(resolve, reject) {
+  return new Promise(function(resolve) {
     var examples = {};
     examples['application/json'] = {
   "name" : "name",
@@ -111,8 +111,8 @@ exports.authorsPOST = function(body) {
  * bookId Long 
  * no response value expected for this operation
  **/
-exports.booksBookIdDELETE = function(bookId) {
-  return new Promise(function(resolve, reject) {
+exports.booksBookIdDELETE = function() {
+  return new Promise(function(resolve) {
     resolve();
   });
 }
@@ -124,8 +124,8 @@ exports.booksBookIdDELETE = function(bookId) {
  * bookId Long 
  * returns Book
  **/
-exports.booksBookIdGET = function(bookId) {
-  return new Promise(function(resolve, reject) {
+exports.booksBookIdGET = function() {
+  return new Promise(function(resolve) {
     var examples = {};
     examples['application/json'] = {
   "category_id" : 1,
@@ -150,7 +150,7 @@ exports.booksBookIdGET = function(bookId) {
  * bookId Long 
  * returns Book
  **/
-exports.booksBookIdPUT = function(body,bookId) {
+exports.booksBookIdPUT = function() {
   return new Promise(function(resolve, reject) {
     var examples = {};
     examples['application/json'] = {
@@ -175,7 +175,7 @@ exports.booksBookIdPUT = function(body,bookId) {
  * returns List
  **/
 exports.booksGET = function() {
-  return new Promise(function(resolve, reject) {
+  return new Promise(function(resolve) {
     var examples = {};
     examples['application/json'] = [ {
   "category_id" : 1,
@@ -205,8 +205,8 @@ exports.booksGET = function() {
  * body BookInput 
  * returns Book
  **/
-exports.booksPOST = function(body) {
-  return new Promise(function(resolve, reject) {
+exports.booksPOST = function() {
+  return new Promise(function(resolve) {
     var examples = {};
     examples['application/json'] = {
   "category_id" : 1,
@@ -230,8 +230,8 @@ exports.booksPOST = function(body) {
  * categoryId Long 
  * no response value expected for this operation
  **/
-exports.categoriesCategoryIdDELETE = function(categoryId) {
-  return new Promise(function(resolve, reject) {
+exports.categoriesCategoryIdDELETE = function() {
+  return new Promise(function(resolve) {
     resolve();
   });
 }
@@ -243,7 +243,7 @@ exports.categoriesCategoryIdDELETE = function(categoryId) {
  * categoryId Long 
  * returns Category
  **/
-exports.categoriesCategoryIdGET = function(categoryId) {
+exports.categoriesCategoryIdGET = function() {
   return new Promise(function(resolve, reject) {
     var examples = {};
     examples['application/json'] = {
@@ -266,7 +266,7 @@ exports.categoriesCategoryIdGET = function(categoryId) {
  * categoryId Long 
  * returns Category
  **/
-exports.categoriesCategoryIdPUT = function(body,categoryId) {
+exports.categoriesCategoryIdPUT = function() {
   return new Promise(function(resolve, reject) {
     var examples = {};
     examples['application/json'] = {
@@ -288,7 +288,7 @@ exports.categoriesCategoryIdPUT = function(body,categoryId) {
  * returns List
  **/
 exports.categoriesGET = function() {
-  return new Promise(function(resolve, reject) {
+  return new Promise(function(resolve) {
     var examples = {};
     examples['application/json'] = [ {
   "name" : "name",
@@ -313,7 +313,7 @@ exports.categoriesGET = function() {
  * returns Category
  **/
 exports.categoriesPOST = function(body) {
-  return new Promise(function(resolve, reject) {
+  return new Promise(function(resolve) {
     var examples = {};
     examples['application/json'] = {
   "name" : "name",
